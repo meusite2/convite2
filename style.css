@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(179, 244, 246), #B5CA5B, #1A8C25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: rgb(46, 0, 35);
+    margin: 10px;
+}
+
+.container {
+    background: linear-gradient(135deg, rgb(160, 180, 211), #B5CA5B, #1A8C25);
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;   
+    box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;
+    
+}
+
+.title {
+    
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    width: 100%;
+    margin: 10px 0;
+    height: 70vh;
+    overflow: hidden;    
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    display: block; 
+}
+
+
+
+
+.confirm-button {
+  
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    font-size: 1rem;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.3s;    
+    border: none;  
+
+}
+   .botoes {
+       display: flex;
+       justify-content: center; /* Centraliza os botões horizontalmente */
+       gap: 5px; /* Espaçamento entre os botões */
+       margin-top: -7px; /* Ajuste conforme necessário */
+       width: 100%; /* Para ocupar todo o espaço disponível */
+       margin-left: 1px;
+       
+   }
+   .botoes a {
+       display: inline-block; /* Garante que o link respeite as dimensões da imagem */
+       text-decoration: none; /* Remove o sublinhado do link */
+       width: 87px; /* Defina uma largura fixa (ou ajuste conforme a imagem) */
+       height: auto; /* Permite que a altura se ajuste automaticamente */
+       
+   }
+
+   .confirm-button {
+       width: 100%; /* Faz a imagem preencher a largura do link */
+       height: auto; /* Mantém a proporção da imagem */
+       display: block; /* Remove espaços indesejados abaixo da imagem */
+   }
+
+.interage{
+    display: flex;
+    flex-direction: row;
+    margin-top: -198px;
+    margin-left: 96px;
+    width: 180px;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.interage .pulsa {
+    animation: pulsar 1.5s infinite; /* Aplica a animação de pulsar */
+}
+@media screen and (max-width: 400px){
+    .botoes{    
+    width: 100%;
+    margin-top: -5px;   
+    gap: 4px;
+    margin-left: 1px;
+    
+}
+    .botoes a{
+        width: 80px;
+    }
+
+    .interage{
+    display: flex;
+    flex-direction: row;
+    margin-top: -180px;
+    margin-left: 100px;
+    width: 140px;
+}
+}
